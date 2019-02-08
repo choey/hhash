@@ -6,7 +6,12 @@ hhash is a consistent, human-readable hashing algorithm
 author desired something like the 
 [docker container name generator](https://github.com/moby/moby/blob/master/pkg/namesgenerator/names-generator.go)
 but with consistent hashing and rich custom pattern 
- 
+
+# installation
+```
+$ go get github.com/choey/hhash
+$ go get github.com/choey/hhash/cmd/hhash
+```
 
 # features
 * supports custom pattern
