@@ -41,3 +41,6 @@ $ hhash -s 'hello, world' -v
 fond_bonefish
 ```
 (verbose mode calculates collision rate and thus is slightly slower than non-verbose mode)
+
+# attributions
+* [WordNet](https://wordnet.princeton.edu/license-and-commercial-use) provides the default datasets
