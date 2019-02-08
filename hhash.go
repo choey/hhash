@@ -19,6 +19,8 @@ type HHash struct {
 	pattern string
 	// regexp is a pointer to the compiled Regexp corresponding to the hash pattern, set in InitPattern
 	regexp *regexp.Regexp
+	// numChoicesPerWord tracks the size of datasets considered in order to generate hash for some pattern; used to calculate collision rate
+	numChoicesPerWord []uint
 	// Adjectives is a slice of adjectives
 	Adjectives []string
 	// Adverbs is a slice of adverbs
@@ -35,8 +37,6 @@ type HHash struct {
 	AllowRepeats bool
 	// CalculateCollisionRate, if true, calculates the collision rate given the datasets, upon the first hash operation
 	CalculateCollisionRate bool
-	// numChoicesPerWord tracks the size of datasets considered in order to generate hash for some pattern; used to calculate collision rate
-	numChoicesPerWord []uint
 }
 
 // WordType is a semantic type of words that a given token would generate.
@@ -134,7 +134,7 @@ func (hasher *HHash) hashForWordType(wordType WordType, previousHash uint64) uin
 		for currentIndex == previousIndex {
 			timesRepeated++
 			if timesRepeated > 1 {
-				// for all three generatations of the seed (counting the initial) to be the same is extremely rare
+				// for all three generations of the seed (counting the initial) to be the same is extremely rare
 				log.Printf(
 					"previous hash (%d) and new hash (%d) map to the same index (%d) for the %d-th time. re-hashing...",
 					previousHash, newHash, currentIndex, timesRepeated)
