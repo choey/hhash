@@ -1,0 +1,22 @@
+package hhash
+
+// DefaultDatasetVersion is the version of the default datasets to determine whether two instances of HHash will produce consistent hashes.
+var DefaultDatasetVersion = 1
+
+// DefaultAdjectives provide default set of adjects
+var DefaultAdjectives = []string{DEFAULT_ADJECTIVES}
+
+// DefaultAdverbs provide default set of adverbs
+var DefaultAdverbs = []string{DEFAULT_ADVERBS}
+
+// DefaultNouns provide default set of nouns
+var DefaultNouns = []string{DEFAULT_NOUNS}
+
+// DefaultVerbs provide default set of verbs
+var DefaultVerbs = []string{DEFAULT_VERBS}
+
+// DefaultVerbsGerund provide default set of gerunds ("-ing")
+var DefaultVerbsGerund = []string{DEFAULT_VERBS_GERUND}
+
+// DefaultVerbsPast provide default set of verbs in the past tense
+var DefaultVerbsPast = []string{DEFAULT_VERBS_PAST}
