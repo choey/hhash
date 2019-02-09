@@ -1,6 +1,6 @@
 # hhash
 
-hhash is a consistent, human-readable hashing algorithm
+hhash is a consistent, human-readable hashing engine
 
 # why
 author desired something like the 
