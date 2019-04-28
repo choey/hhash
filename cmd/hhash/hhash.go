@@ -3,13 +3,13 @@ package main
 import (
 	"bufio"
 	"fmt"
-	"hhash"
 	"io"
 	"io/ioutil"
 	"log"
 	"os"
 	"time"
 
+	"github.com/choey/hhash"
 	"github.com/google/uuid"
 	"github.com/integrii/flaggy"
 )
